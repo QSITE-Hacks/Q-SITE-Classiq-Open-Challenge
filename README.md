@@ -20,6 +20,42 @@ design and enables you to focus on the algorithm you want to create rather than 
 circuit implementation.
 
 The goal is to apply the above algorithm to a simple differential equation. For this, you should
-solve the harmonic oscillator equation,
-$$ y'' + \omega^2 y = 0, \ \ \ y(0) = 1, \ \ \ y'(0) = 1 $$
-with frequency $\omega = 1$. After solving this equation using the algorithm, you should:
+solve the harmonic oscillator equation, with frequency $\omega = 1$.
+
+!["y'' + \omega^2 y = 0, \ \ \ \ y(0) = 1, \ \ \ \ y'(0) = 1"](render.png)
+
+After solving this equation using the algorithm, you should:
+1. Use the output as a means to evaluate the kinetic and potential energy of the system as
+a function of time in the interval $[0, 1]$.
+2. Analyze how the kinetic and potential energy values vary when you try different values
+for the bounds in functions that require it (for example, the `inplace_prepare_state()`).
+3. Analyze the count gate when optimizing the circuit in width or depth.
+
+## What you need to submit
+1. Final presentation that explains your solution and your implementation
+2. The jupyter notebook you worked with
+3. The .qmod files that capture your models (a detailed explanation of how to do this can
+be found in [this notebook](https://github.com/iQuHACK/2024_Classiq/blob/main/classiq_challenge.ipynb))
+4. The .qprog files that captures your quantum programs (a detailed explanation of how to
+do this can be found in [this notebook](https://github.com/iQuHACK/2024_Classiq/blob/main/classiq_challenge.ipynb))
+
+TODO: Replace with files in current GitHub repo!
+
+## Submission details
+1. TODO
+
+### Submission tutorial
+
+TODO: Add tutorial video
+
+## Getting Started
+If you are new to Classiq, we recommend starting with these guiding materials:
+1. [Classiq 101](https://docs.classiq.io/latest/classiq_101/) will give you a smooth start with the platform and a general understanding of its concepts.
+2. The one-hour-long [Classiq Fundamentals Workshop](https://www.youtube.com/watch?v=k9Lqz6r-8A4&list=PL_wGNAk5B0pXq98BJBKsbNH2Qjp1lk8dG&index=17) covers the basics of Classiq,
+including some hands-on exercises to get you started.
+3. The walkthrough on [the platform home page](https://platform.classiq.io/) will give you a tour of the platform and its
+architecture.
+
+Good luck!
+
+(A PDF version of the same documentation in this `README` has been provided too.)
