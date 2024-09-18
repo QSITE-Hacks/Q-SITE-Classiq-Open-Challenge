@@ -42,11 +42,13 @@ do this can be found in [this notebook](https://github.com/iQuHACK/2024_Classiq/
 TODO: Replace with files in current GitHub repo!
 
 ## Submission details
-1. TODO
+1. Fork this GitHub repository.
+2. After working on the challenge implementation, add all your submission files (as listed above) to your fork.
+3. Create a pull request on the original Q-SITE repository which includes your submission.
 
 ### Submission tutorial
 
-TODO: Add tutorial video
+TODO: Add tutorial video once ready.
 
 ## Getting Started
 If you are new to Classiq, we recommend starting with these guiding materials:
