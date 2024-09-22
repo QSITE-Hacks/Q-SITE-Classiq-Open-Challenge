@@ -35,11 +35,9 @@ for the bounds in functions that require it (for example, the `inplace_prepare_s
 1. Final presentation that explains your solution and your implementation
 2. The jupyter notebook you worked with
 3. The .qmod files that capture your models (a detailed explanation of how to do this can
-be found in [this notebook](https://github.com/iQuHACK/2024_Classiq/blob/main/classiq_challenge.ipynb))
+be found in [this notebook](https://github.com/QSITE-Hacks/Q-SITE-Classiq-Open-Challenge/blob/main/sample_notebooks/classiq_challenge_iquhack24.ipynb))
 4. The .qprog files that captures your quantum programs (a detailed explanation of how to
-do this can be found in [this notebook](https://github.com/iQuHACK/2024_Classiq/blob/main/classiq_challenge.ipynb))
-
-TODO: Replace with files in current GitHub repo!
+do this can be found in [this notebook](https://github.com/QSITE-Hacks/Q-SITE-Classiq-Open-Challenge/blob/main/sample_notebooks/classiq_challenge_iquhack24.ipynb))
 
 ## Submission details
 1. Fork this GitHub repository.
@@ -48,7 +46,7 @@ TODO: Replace with files in current GitHub repo!
 
 ### Submission tutorial
 
-TODO: Add tutorial video once ready.
+TODO: Tutorial video demonstrating above instructions coming soon.
 
 ## Getting Started
 If you are new to Classiq, we recommend starting with these guiding materials:
