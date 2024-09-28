@@ -1,0 +1,591 @@
+{
+  "functions": [
+    {
+      "name": "encoding",
+      "positional_arg_declarations": [
+        {
+          "name": "q",
+          "kind": "PortDeclaration",
+          "quantum_type": {
+            "kind": "qvec",
+            "element_type": {
+              "kind": "qbit"
+            }
+          },
+          "direction": "inout"
+        },
+        {
+          "name": "ancilla_1",
+          "kind": "PortDeclaration",
+          "quantum_type": {
+            "kind": "qvec",
+            "element_type": {
+              "kind": "qbit"
+            }
+          },
+          "direction": "inout"
+        },
+        {
+          "name": "ancilla_2",
+          "kind": "PortDeclaration",
+          "quantum_type": {
+            "kind": "qvec",
+            "element_type": {
+              "kind": "qbit"
+            }
+          },
+          "direction": "inout"
+        }
+      ],
+      "body": [
+        {
+          "source_ref": {
+            "start_line": 11,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "H",
+          "positional_args": [
+            {
+              "base_handle": {
+                "name": "q"
+              },
+              "index": {
+                "expr": "0"
+              }
+            }
+          ]
+        },
+        {
+          "source_ref": {
+            "start_line": 12,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "X",
+          "positional_args": [
+            {
+              "base_handle": {
+                "name": "q"
+              },
+              "index": {
+                "expr": "1"
+              }
+            }
+          ]
+        },
+        {
+          "source_ref": {
+            "start_line": 15,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "H",
+          "positional_args": [
+            {
+              "base_handle": {
+                "name": "ancilla_1"
+              },
+              "index": {
+                "expr": "0"
+              }
+            }
+          ]
+        },
+        {
+          "source_ref": {
+            "start_line": 18,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "H",
+          "positional_args": [
+            {
+              "base_handle": {
+                "name": "ancilla_2"
+              },
+              "index": {
+                "expr": "0"
+              }
+            }
+          ]
+        },
+        {
+          "source_ref": {
+            "start_line": 19,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "H",
+          "positional_args": [
+            {
+              "base_handle": {
+                "name": "ancilla_2"
+              },
+              "index": {
+                "expr": "1"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "entanglement_creation",
+      "positional_arg_declarations": [
+        {
+          "name": "q",
+          "kind": "PortDeclaration",
+          "quantum_type": {
+            "kind": "qvec",
+            "element_type": {
+              "kind": "qbit"
+            }
+          },
+          "direction": "inout"
+        },
+        {
+          "name": "ancilla_1",
+          "kind": "PortDeclaration",
+          "quantum_type": {
+            "kind": "qvec",
+            "element_type": {
+              "kind": "qbit"
+            }
+          },
+          "direction": "inout"
+        },
+        {
+          "name": "ancilla_2",
+          "kind": "PortDeclaration",
+          "quantum_type": {
+            "kind": "qvec",
+            "element_type": {
+              "kind": "qbit"
+            }
+          },
+          "direction": "inout"
+        }
+      ],
+      "body": [
+        {
+          "source_ref": {
+            "start_line": 31,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "CRY",
+          "positional_args": [
+            {
+              "expr": "0.5"
+            },
+            {
+              "base_handle": {
+                "name": "ancilla_2"
+              },
+              "index": {
+                "expr": "0"
+              }
+            },
+            {
+              "base_handle": {
+                "name": "q"
+              },
+              "index": {
+                "expr": "0"
+              }
+            }
+          ]
+        },
+        {
+          "source_ref": {
+            "start_line": 32,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "CRX",
+          "positional_args": [
+            {
+              "expr": "0.5"
+            },
+            {
+              "base_handle": {
+                "name": "ancilla_2"
+              },
+              "index": {
+                "expr": "0"
+              }
+            },
+            {
+              "base_handle": {
+                "name": "q"
+              },
+              "index": {
+                "expr": "1"
+              }
+            }
+          ]
+        },
+        {
+          "source_ref": {
+            "start_line": 31,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "CRY",
+          "positional_args": [
+            {
+              "expr": "0.5"
+            },
+            {
+              "base_handle": {
+                "name": "ancilla_2"
+              },
+              "index": {
+                "expr": "1"
+              }
+            },
+            {
+              "base_handle": {
+                "name": "q"
+              },
+              "index": {
+                "expr": "0"
+              }
+            }
+          ]
+        },
+        {
+          "source_ref": {
+            "start_line": 32,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "CRX",
+          "positional_args": [
+            {
+              "expr": "0.5"
+            },
+            {
+              "base_handle": {
+                "name": "ancilla_2"
+              },
+              "index": {
+                "expr": "1"
+              }
+            },
+            {
+              "base_handle": {
+                "name": "q"
+              },
+              "index": {
+                "expr": "1"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "decoding",
+      "positional_arg_declarations": [
+        {
+          "name": "q",
+          "kind": "PortDeclaration",
+          "quantum_type": {
+            "kind": "qvec",
+            "element_type": {
+              "kind": "qbit"
+            }
+          },
+          "direction": "inout"
+        },
+        {
+          "name": "ancilla_1",
+          "kind": "PortDeclaration",
+          "quantum_type": {
+            "kind": "qvec",
+            "element_type": {
+              "kind": "qbit"
+            }
+          },
+          "direction": "inout"
+        },
+        {
+          "name": "ancilla_2",
+          "kind": "PortDeclaration",
+          "quantum_type": {
+            "kind": "qvec",
+            "element_type": {
+              "kind": "qbit"
+            }
+          },
+          "direction": "inout"
+        }
+      ],
+      "body": [
+        {
+          "source_ref": {
+            "start_line": 41,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "H",
+          "positional_args": [
+            {
+              "base_handle": {
+                "name": "ancilla_2"
+              },
+              "index": {
+                "expr": "0"
+              }
+            }
+          ]
+        },
+        {
+          "source_ref": {
+            "start_line": 42,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "H",
+          "positional_args": [
+            {
+              "base_handle": {
+                "name": "ancilla_2"
+              },
+              "index": {
+                "expr": "1"
+              }
+            }
+          ]
+        },
+        {
+          "source_ref": {
+            "start_line": 43,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "H",
+          "positional_args": [
+            {
+              "base_handle": {
+                "name": "ancilla_1"
+              },
+              "index": {
+                "expr": "0"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "positional_arg_declarations": [
+        {
+          "name": "q",
+          "kind": "PortDeclaration",
+          "quantum_type": {
+            "kind": "qvec",
+            "element_type": {
+              "kind": "qbit"
+            }
+          },
+          "direction": "output"
+        },
+        {
+          "name": "ancilla_1",
+          "kind": "PortDeclaration",
+          "quantum_type": {
+            "kind": "qvec",
+            "element_type": {
+              "kind": "qbit"
+            }
+          },
+          "direction": "output"
+        },
+        {
+          "name": "ancilla_2",
+          "kind": "PortDeclaration",
+          "quantum_type": {
+            "kind": "qvec",
+            "element_type": {
+              "kind": "qbit"
+            }
+          },
+          "direction": "output"
+        }
+      ],
+      "body": [
+        {
+          "source_ref": {
+            "start_line": 49,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "allocate",
+          "positional_args": [
+            {
+              "expr": "2"
+            },
+            {
+              "name": "q"
+            }
+          ]
+        },
+        {
+          "source_ref": {
+            "start_line": 50,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "allocate",
+          "positional_args": [
+            {
+              "expr": "1"
+            },
+            {
+              "name": "ancilla_1"
+            }
+          ]
+        },
+        {
+          "source_ref": {
+            "start_line": 51,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "allocate",
+          "positional_args": [
+            {
+              "expr": "2"
+            },
+            {
+              "name": "ancilla_2"
+            }
+          ]
+        },
+        {
+          "source_ref": {
+            "start_line": 54,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "encoding",
+          "positional_args": [
+            {
+              "name": "q"
+            },
+            {
+              "name": "ancilla_1"
+            },
+            {
+              "name": "ancilla_2"
+            }
+          ]
+        },
+        {
+          "source_ref": {
+            "start_line": 57,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "entanglement_creation",
+          "positional_args": [
+            {
+              "name": "q"
+            },
+            {
+              "name": "ancilla_1"
+            },
+            {
+              "name": "ancilla_2"
+            }
+          ]
+        },
+        {
+          "source_ref": {
+            "start_line": 60,
+            "start_column": -1,
+            "end_line": -1,
+            "end_column": -1,
+            "file_name": "<ipython-input-66-36595690b6c6>"
+          },
+          "kind": "QuantumFunctionCall",
+          "function": "decoding",
+          "positional_args": [
+            {
+              "name": "q"
+            },
+            {
+              "name": "ancilla_1"
+            },
+            {
+              "name": "ancilla_2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "types": [],
+  "qstructs": [],
+  "constants": [],
+  "constraints": {
+    "max_width": 5,
+    "optimization_parameter": "depth"
+  }
+}
