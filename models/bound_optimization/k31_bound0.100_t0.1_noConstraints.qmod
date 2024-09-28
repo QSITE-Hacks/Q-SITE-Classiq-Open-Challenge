@@ -1,0 +1,77 @@
+qfunc prep_ancilla(ancilla_reg: qnum, bound: real) {
+  inplace_prepare_state([
+    0.9048,
+    0.0905,
+    0.0045,
+    0.0002,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ], bound, ancilla_reg);
+}
+
+qfunc compose(gate1: qfunc (qbit), gate2: qfunc (qbit), q: qbit) {
+  gate1(q);
+  gate2(q);
+}
+
+qfunc operate(ancilla_reg: qnum, work_q: qbit, k: int) {
+  H(work_q);
+  repeat (index: k + 1) {
+    control (ancilla_reg == index) {
+      if ((index % 4) == 0) {
+        I(work_q);
+      } else {
+        if ((index % 4) == 1) {
+          compose(X, Z, work_q);
+        } else {
+          if ((index % 4) == 2) {
+            RZ(6.2832, work_q);
+          } else {
+            compose(Z, X, work_q);
+          }
+        }
+      }
+    }
+  }
+}
+
+qfunc main(output work_q: qbit, output ancilla_reg: qnum) {
+  allocate(1, work_q);
+  allocate(5.0, ancilla_reg);
+  within {
+    prep_ancilla(ancilla_reg, 0.1);
+  } apply {
+    operate(ancilla_reg, work_q, 31);
+  }
+  if (False) {
+    H(work_q);
+  } else {
+    I(work_q);
+  }
+}
